@@ -1,0 +1,9 @@
+#MISE {% set output_dir = 'build' %}
+
+[tasks.build]
+run = "gogio --target js -o {{ output_dir }} ."
+sources = ['main.go']
+outputs = ['{{ output_dir }}/*']
+
+[tasks.clean]
+run = "rm -rf {{ output_dir }}"
