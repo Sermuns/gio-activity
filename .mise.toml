@@ -1,10 +1,10 @@
-[env]
-OUTPUT_DIR = 'build'
+[vars]
+output_dir = 'build'
 
 [tasks.build]
-run = "gogio --target js -o $OUTPUT_DIR ."
+run = "gogio --target js -o {{ vars.output_dir }} ."
 sources = ['main.go']
-outputs = ["{{ get_env(name='OUTPUT_DIR') ~ '/*' }}"]
+outputs = "{{ vars.output_dir }}/*"
 
 [tasks.clean]
-run = "rm -rf $OUTPUT_DIR"
+run = "rm -rf {{ vars.output_dir }}"
