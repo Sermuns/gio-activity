@@ -1,0 +1,10 @@
+[vars]
+output_dir = 'build'
+
+[tasks.build]
+run = "gogio --target js -o {{ vars.output_dir }} ."
+sources = ['main.go']
+outputs = "{{ vars.output_dir }}/*"
+
+[tasks.clean]
+run = "rm -rf {{ vars.output_dir }}"
