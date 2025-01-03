@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("AtkinsonHyperlegible-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body,
+button {
+  font-size: 3rem;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+button {
+  align-self: flex-start;
+  padding: 1rem 3rem;
+  margin-top: auto;
+}
+
+#output {
+  margin: auto;
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  row-gap: 10vh;
+  justify-self: center;
+  padding: 2rem;
+}
+
+#word {
+  grid-column: 1 / -1;
+  font-size: 200%;
+  justify-self: center;
+  padding: 0.5em;
+}
+
+#type {
+  justify-self: left;
+}
+#difficulty {
+  justify-self: right;
+}
